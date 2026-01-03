@@ -1,48 +1,45 @@
 # Computer Vision Techniques Demo
 
-A comprehensive demonstration of various computer vision algorithms implemented using OpenCV and Python. This project processes a video stream to showcase filtering, edge detection, object tracking, and custom segmentation pipelines.
+This repository contains a collection of computer vision algorithms implemented as part of a **Computer Vision Course Assignment**. The project demonstrates various image processing techniques using OpenCV and Python, including filtering, edge detection, object detection, and a custom object tracking pipeline.
+
+**Note:** This codebase is provided as a personal archive of course work.
 
 ## Demo Preview
 
 ### Processed Output
-<video src="output_demo_example.mp4" controls width="100%"></video>
-
-[Download Output Video](output_demo_example.mp4)
+[▶️ View Output Video (output_demo_example.mp4)](output_demo_example.mp4)
 
 ### Original Input
-<video src="input_video.mp4" controls width="100%"></video>
-
-[Download Input Video](input_video.mp4)
+[▶️ View Input Video (input_video.mp4)](input_video.mp4)
 
 ---
 
 ## Overview
 
-This repository contains a Jupyter Notebook (`computer_vision_demos.ipynb`) that progressively applies different computer vision techniques to a video feed.
+The core of this project is the Jupyter Notebook `computer_vision_demos.ipynb`, which processes a video stream (`input_video.mp4`) frame-by-frame to visualize different CV concepts.
 
-### Key Techniques Demonstrated:
+### Key Techniques Demonstrated
 
-1.  **Basic Image Processing**:
-    *   Grayscale conversion
-    *   Start/Stop processing control
+1.  **Basic Image Processing**
+    *   Grayscale conversion and basic channel manipulation.
 
-2.  **Filtering & Noise Reduction**:
-    *   **Gaussian Blur**: Smoothing images to reduce noise.
-    *   **Bilateral Filter**: smoothing while preserving edges.
+2.  **Filtering & Noise Reduction**
+    *   **Gaussian Blur**: Smoothing images to reduce high-frequency noise.
+    *   **Bilateral Filter**: smoothing images while preserving edge sharpness.
 
-3.  **Edge Detection**:
-    *   **Sobel Operator**: Detecting vertical and horizontal edges.
-    *   **Canny Edge Detector**: Robust multi-stage edge detection.
+3.  **Edge Detection**
+    *   **Sobel Operator**: Computing image gradients to detect vertical and horizontal edges.
+    *   **Canny Edge Detector**: A multi-stage algorithm for robust edge detection.
 
-4.  **Object Detection**:
-    *   **Color-Based Segmentation**: Isolating objects based on HSV/BGR color distances.
-    *   **Hough Circle Transform**: Detecting circular objects in the frame.
-    *   **Template Matching**: Finding a reference image within the video frame.
+4.  **Object Detection**
+    *   **Color-Based Segmentation**: Isolating objects based on specific color ranges (HSV/BGR).
+    *   **Hough Circle Transform**: Detecting circular shapes in the frame.
+    *   **Template Matching**: Locating a specific template image within a larger video frame.
 
-5.  **Advanced Tracking Pipeline**:
-    *   Combining color segmentation, morphological operations (Opening/Closing), contour detection, and ellipse fitting to track moving objects.
-    *   Trajectory smoothing using convolution.
-    *   Visual effects (Hue shifting on tracked objects).
+5.  **Advanced Custom Tracking Pipeline**
+    *   A comprehensive pipeline combining **Color Segmentation**, **Morphological Operations** (Opening/Closing), **Contour Detection**, and **Ellipse Fitting**.
+    *   Includes **Trajectory Smoothing** using temporal convolution.
+    *   Demonstrates visual effects like **dynamic hue shifting** on tracked objects.
 
 ## Getting Started
 
@@ -62,19 +59,17 @@ pip install opencv-python numpy jupyter
 ### Usage
 
 1.  Clone this repository.
-2.  Open the notebook:
+2.  Launch the notebook:
     ```bash
     jupyter notebook computer_vision_demos.ipynb
     ```
-3.  Run the cells sequentially to process `input_video.mp4` and generate `output_demo.mp4`.
+3.  Execute the cells sequentially to process `input_video.mp4`.
+4.  The script will generate a new `output_demo.mp4` file with all visual effects applied.
 
 ## Project Structure
 
 *   `computer_vision_demos.ipynb`: Main source code and documentation.
-*   `input_video.mp4`: Source video for testing.
-*   `output_demo.mp4`: Generated result showing all effects.
-*   `tracking_template.png`: Template image used for template matching demo.
+*   `input_video.mp4`: Raw input video for testing.
+*   `output_demo_example.mp4`: Example of the processed output video.
+*   `tracking_template.png`: Template image used for the template matching demo.
 
-## License
-
-This project is for educational purposes.
